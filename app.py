@@ -5,8 +5,8 @@ app = Flask(__name__)
 CORS(app)  # Enable CORS for all routes
 
 @app.route('/', methods=['GET'])
-def hello_world():
-    return 'Hello from Flask!'
+def index():
+    return 'Server Running!'
 
 @app.route('/chat', methods=['POST'])
 def chat():
@@ -14,7 +14,8 @@ def chat():
     
     # Check if the message is "hi"
     if user_input.lower() == "hi":
-        return jsonify({'response': 'Hello!'})
+        # Return personalized response
+        return jsonify({'response': 'Hello, Geuel 1234'})
     else:
         return jsonify({'response': 'I don\'t understand.'})
 
