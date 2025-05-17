@@ -6,7 +6,7 @@ CORS(app)  # Enable CORS for all routes
 
 @app.route('/', methods=['GET'])
 def index():
-    return 'Server Running!'
+    return 'Server Running!!'
 
 @app.route('/chat', methods=['POST'])
 def chat():
